@@ -1,6 +1,6 @@
 public class FindPathInputReaderStdIn extends AbstractFindPathInputReader {
     @Override
-    public String findPath(char[][] maze) {
+    public String findPath(char[][] maze, String file) {
         int[] start = FindPathUtils.findStartOrEnd(maze, 'S');
         int[] end = FindPathUtils.findStartOrEnd(maze, 'X');
         StringBuilder sb = new StringBuilder();
@@ -72,11 +72,6 @@ public class FindPathInputReaderStdIn extends AbstractFindPathInputReader {
         return sb.toString();
 
 
-    }
-
-    @Override
-    public String findPath(String file) {
-        return null;
     }
 
     public static int findDifference(int a, int b) {
