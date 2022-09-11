@@ -26,22 +26,22 @@ public class FindPathUtils {
         }
     }
 
-    public static char[][] convertFileToCharArray(List<String> listOfLines){
+    public static char[][] convertFileToCharArray(List<String> listOfLines) {
 
         char[][] result = new char[listOfLines.size()][];
 
         for (int i = 0; i < listOfLines.size(); i++) {
-          result[i] =  listOfLines.get(i).toCharArray();
+            result[i] = listOfLines.get(i).toCharArray();
         }
         return result;
     }
 
-    public static List<String> readFileLineByLine(String file){
+    public static List<String> readFileLineByLine(String file) {
         Path filepath = Paths.get(file);
         try {
             return Files.readAllLines(filepath);
-        }catch (IOException e){
-            System.err.println("Unable to read file: "+ file);
+        } catch (IOException e) {
+            System.err.println("Unable to read file: " + file);
             return new ArrayList<>();
         }
     }
